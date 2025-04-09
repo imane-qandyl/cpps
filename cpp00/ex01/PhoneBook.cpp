@@ -6,7 +6,7 @@
 /*   By: imqandyl <imqandyl@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/05 09:04:40 by imqandyl          #+#    #+#             */
-/*   Updated: 2025/04/09 11:23:21 by imqandyl         ###   ########.fr       */
+/*   Updated: 2025/04/09 12:23:16 by imqandyl         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -79,12 +79,10 @@ void PhoneBook::displayContact(int index)
 		std::cout << "Invalid contact index." << std::endl;
 		return;
 	}
-//Print the table headers
 	std::cout << std::setw(10) << "Index" << "|"
 	          << std::setw(10) << "FirstName" << "|"
 	          << std::setw(10) << "LastName" << "|"
 	          << std::setw(10) << "NickName" << std::endl;
-//Print the contact data
 	std::cout << std::setw(10) << index << "|"
 	          << std::setw(10) << formatText(contacts[index].getFirstName(), 10) << "|"
 	          << std::setw(10) << formatText(contacts[index].getLastName(), 10) << "|"
@@ -116,7 +114,6 @@ void	PhoneBook::searchContacts(std::string command)
 	if (command == "EXIT" || std::cin.eof())
 	return;
 
-	// Check that it's all digits
 	for (size_t i = 0; i < command.length(); i++) {
 		if (!isdigit(command[i])) {
 			std::cout << "Index should be a number.\n";
