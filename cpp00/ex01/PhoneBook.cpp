@@ -6,7 +6,7 @@
 /*   By: imqandyl <imqandyl@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/05 09:04:40 by imqandyl          #+#    #+#             */
-/*   Updated: 2025/04/05 14:57:36 by imqandyl         ###   ########.fr       */
+/*   Updated: 2025/04/09 11:23:21 by imqandyl         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -94,7 +94,22 @@ void PhoneBook::displayContact(int index)
 void	PhoneBook::searchContacts(std::string command)
 {
 	int i = -1;
-	
+    if (contactCount == 0) {
+        std::cout << "\033[1;31mNo contacts available.\033[0m" << std::endl;
+        return;
+    }
+
+    std::cout << std::setw(10) << "Index" << "|"
+              << std::setw(10) << "FirstName" << "|"
+              << std::setw(10) << "LastName" << "|"
+              << std::setw(10) << "NickName" << std::endl;
+
+    for (int i = 0; i < contactCount; i++) {
+        std::cout << std::setw(10) << i << "|"
+                  << std::setw(10) << formatText(contacts[i].getFirstName(), 10) << "|"
+                  << std::setw(10) << formatText(contacts[i].getLastName(), 10) << "|"
+                  << std::setw(10) << formatText(contacts[i].getNickName(), 10) << std::endl;
+    }
 	std::cout << "Enter the contact index: ";
 	std::getline(std::cin >> std::ws, command);
 
