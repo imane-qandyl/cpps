@@ -6,7 +6,7 @@
 /*   By: imqandyl <imqandyl@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/05 09:04:40 by imqandyl          #+#    #+#             */
-/*   Updated: 2025/04/09 12:23:16 by imqandyl         ###   ########.fr       */
+/*   Updated: 2025/04/09 19:50:47 by imqandyl         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,22 +18,22 @@ void PhoneBook::addContact() {
 
 	std::cout << "Enter First Name: ";
 	std::getline(std::cin >> std::ws, input);
-	if (input.empty()) return;
+	if (input.empty() || std::cin.eof()) return;
 	newContact.setFirstName(input);
 
 	std::cout << "Enter Last Name: ";
 	std::getline(std::cin >> std::ws, input);
-	if (input.empty()) return;
+	if (input.empty() || std::cin.eof()) return;
 	newContact.setLastName(input);
 
 	std::cout << "Enter Nickname: ";
 	std::getline(std::cin >> std::ws, input);
-	if (input.empty()) return;
+	if (input.empty() || std::cin.eof()) return;
 	newContact.setNickName(input);
 
 	std::cout << "Enter Darkest Secret: ";
 	std::getline(std::cin >> std::ws, input);
-	if (input.empty()) return;
+	if (input.empty() || std::cin.eof()) return;
 	newContact.setDarkestSecret(input);
 
 	// Validate phone number
