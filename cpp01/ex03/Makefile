@@ -1,0 +1,36 @@
+# **************************************************************************** #
+#                                                                              #
+#                                                         :::      ::::::::    #
+#    Makefile                                           :+:      :+:    :+:    #
+#                                                     +:+ +:+         +:+      #
+#    By: imqandyl <imqandyl@student.42.fr>          +#+  +:+       +#+         #
+#                                                 +#+#+#+#+#+   +#+            #
+#    Created: 2025/04/11 07:52:31 by imqandyl          #+#    #+#              #
+#    Updated: 2025/04/11 07:54:47 by imqandyl         ###   ########.fr        #
+#                                                                              #
+# **************************************************************************** #
+
+C++ = c++
+
+C++_FLAGS = -Wall -Wextra -Werror -std=c++98 
+
+NAME = zombie
+
+SRC = Weapon.cpp\
+		HumanA.cpp\
+		HumanB.cpp\
+		main.cpp
+		
+OBJ = $(SRC:.cpp=.o)
+
+all: $(NAME)
+
+$(NAME): $(OBJ)
+	$(C++) $(C++_FLAGS) -o $(NAME) $(OBJ)
+%.o: %.cpp
+	$(C++) $(C++_FLAGS) -c $< -o $@
+clean:
+	rm -f $(OBJ)
+fclean: clean
+	rm -f $(NAME)
+re: fclean all
