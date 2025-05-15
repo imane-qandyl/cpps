@@ -6,7 +6,7 @@
 #    By: imqandyl <imqandyl@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/05/11 08:21:33 by imqandyl          #+#    #+#              #
-#    Updated: 2025/05/11 08:59:05 by imqandyl         ###   ########.fr        #
+#    Updated: 2025/05/15 20:49:24 by imqandyl         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -17,7 +17,8 @@ NAME = FragTrap
 
 SRC = main.cpp \
       ClapTrap.cpp \
-      FragTrap.cpp
+      FragTrap.cpp\
+	  ScavTrap.cpp\
 
 OBJ = $(SRC:.cpp=.o)
 

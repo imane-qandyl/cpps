@@ -6,13 +6,13 @@
 /*   By: imqandyl <imqandyl@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/04 08:33:58 by imqandyl          #+#    #+#             */
-/*   Updated: 2025/05/11 08:47:49 by imqandyl         ###   ########.fr       */
+/*   Updated: 2025/05/15 20:38:53 by imqandyl         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ClapTrap.hpp"
 
-ClapTrap::ClapTrap(std::string name) : name(name), hitPoints(10), energyPoints(10), attackDamage(0) {
+ClapTrap::ClapTrap(const std::string &name) : name(name), hitPoints(10), energyPoints(10), attackDamage(0) {
     std::cout << "ClapTrap constructor called for " << this->name << std::endl;
 }
 
@@ -42,7 +42,7 @@ void ClapTrap::attack(const std::string &target) {
         std::cout << "ClapTrap " << name << " cannot attack! Not enough energy or hit points." << std::endl;
         return;
     }
-        energyPoints--; //spends 1 energy point
+    energyPoints--; //spends 1 energy point
     std::cout << "ClapTrap " << name << " attacks " << target
               << ", causing " << attackDamage << " points of damage! (Energy left: " << energyPoints << ")" << std::endl;
 }
