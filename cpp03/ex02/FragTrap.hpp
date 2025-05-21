@@ -6,7 +6,7 @@
 /*   By: imqandyl <imqandyl@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/11 11:10:11 by imqandyl          #+#    #+#             */
-/*   Updated: 2025/05/15 20:48:11 by imqandyl         ###   ########.fr       */
+/*   Updated: 2025/05/21 19:50:51 by imqandyl         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ class FragTrap : public ClapTrap
 {
     public:
         FragTrap(const std::string name);
-        FragTrap(FragTrap &target);
+        FragTrap(const FragTrap &target);
         FragTrap &operator=(const FragTrap &ClapTrap);
         ~FragTrap();
         void    highFivesGuys(void);

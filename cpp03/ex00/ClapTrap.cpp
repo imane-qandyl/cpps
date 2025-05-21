@@ -6,7 +6,7 @@
 /*   By: imqandyl <imqandyl@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/04 08:33:58 by imqandyl          #+#    #+#             */
-/*   Updated: 2025/05/15 19:57:31 by imqandyl         ###   ########.fr       */
+/*   Updated: 2025/05/21 19:42:54 by imqandyl         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ ClapTrap::ClapTrap(const std::string &name) : name(name), hitPoints(10), energyP
 ClapTrap::~ClapTrap() {
     std::cout << "ClapTrap destructor called for " << this->name << std::endl;
 }
-ClapTrap::ClapTrap(ClapTrap &target)
+ClapTrap::ClapTrap(const ClapTrap &target)
 {
 	std::cout << "ClapTrap Copy Constructor is Called" << std::endl;
 	*this = target;

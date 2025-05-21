@@ -6,7 +6,7 @@
 /*   By: imqandyl <imqandyl@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/04 08:23:36 by imqandyl          #+#    #+#             */
-/*   Updated: 2025/05/15 19:44:01 by imqandyl         ###   ########.fr       */
+/*   Updated: 2025/05/21 19:42:48 by imqandyl         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ private:
 
 public:
     ClapTrap(const std::string &name);
-    ClapTrap(ClapTrap &target);
+    ClapTrap(const ClapTrap &target);
     ClapTrap &operator=(const ClapTrap &ClapTrap);
     ~ClapTrap();
 

@@ -6,7 +6,7 @@
 /*   By: imqandyl <imqandyl@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/11 08:30:20 by imqandyl          #+#    #+#             */
-/*   Updated: 2025/05/15 20:48:04 by imqandyl         ###   ########.fr       */
+/*   Updated: 2025/05/21 19:39:02 by imqandyl         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ ScavTrap::ScavTrap(const std::string &name) : ClapTrap(name)
 	std::cout << "ScavTrap " << name << " constructed!\n";
 }
 
-ScavTrap::ScavTrap(ScavTrap &target) : ClapTrap(target)
+ScavTrap::ScavTrap(const ScavTrap &target) : ClapTrap(target) 
 {
     std::cout << "ScavTrap Copy Constructor is called" << std::endl;
 	*this = target;
@@ -60,3 +60,4 @@ void ScavTrap::guardGate()
 {
 	std::cout << "ScavTrap " << name << " is now in Gate keeper mode.\n";
 }
+

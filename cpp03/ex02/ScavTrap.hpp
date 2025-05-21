@@ -6,7 +6,7 @@
 /*   By: imqandyl <imqandyl@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/11 08:30:11 by imqandyl          #+#    #+#             */
-/*   Updated: 2025/05/15 20:29:31 by imqandyl         ###   ########.fr       */
+/*   Updated: 2025/05/21 19:51:08 by imqandyl         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ class ScavTrap : public ClapTrap
 {
     public:
         ScavTrap(const std::string &name);
-        ScavTrap(ScavTrap &target);
+        ScavTrap(const ScavTrap &target);
         ScavTrap &operator=(const ScavTrap &ClapTrap);
         ~ScavTrap();
 
