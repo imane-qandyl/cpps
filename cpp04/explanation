@@ -27,3 +27,8 @@ inat main()
 
 //     Use virtual: When you want to override a method in child classes.
 }
+
+
+abstract class:
+
+You cannot instantiate AAnimal directly, but you can still instantiate derived classes (like Dog, Cat, etc.) that override makeSound().
