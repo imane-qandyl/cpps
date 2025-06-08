@@ -22,8 +22,7 @@ Dog &Dog::operator=(const Dog &copy)
     {
         this->type = copy.type;
         if (this->brain)
-        delete this->brain; //to avoid memory leaks.
-        delete brain;
+            delete this->brain;
         this->brain = new Brain(*copy.brain);
     }
     std::cout << "Dog Copy Assignment Constructor Called" << std::endl;
@@ -33,6 +32,13 @@ void Dog::makeSound(void) const
 {
     std::cout << "Dog sound : hawhaw!" << std::endl;
 }
+
+void Dog::setBrain(const std::string& idea, int index)
+{
+    if (brain)
+        brain->setIdea(index, idea);
+}
+
 Brain* Dog::getBrain() const {
     return brain;
 }

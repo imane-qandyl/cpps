@@ -1,12 +1,12 @@
-#ifndef dog_HPP
-#define dog_HPP
+#ifndef DOG_HPP
+#define DOG_HPP
 
 #include "Animal.hpp"
 #include "Brain.hpp"
 #include <iostream>
 #include <string>
 
-class Dog : public Animal
+class Dog : public AAnimal
 {
     private:
     Brain* brain;
@@ -17,7 +17,7 @@ class Dog : public Animal
     ~Dog ();
     const std::string getType() const;
     void makeSound() const;
-    void setBrain(std::string ideas, int index);
+    void setBrain(const std::string& idea, int index);
     Brain* getBrain() const;
 
 };
