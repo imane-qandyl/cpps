@@ -1,6 +1,6 @@
 #ifndef BRAIN_HPP
 #define BRAIN_HPP
-#include "animal.hpp"
+#include "Animal.hpp"
 
 class Brain 
 {

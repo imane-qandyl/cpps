@@ -1,7 +1,7 @@
 #ifndef Cats_HPP
 #define Cats_HPP
 
-#include "animal.hpp"
+#include "Animal.hpp"
 #include "Brain.hpp"
 #include <iostream>
 #include <string>

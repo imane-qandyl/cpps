@@ -6,7 +6,7 @@ NAME = Brain
 SRC = main.cpp\
 	Cat.cpp\
 	Dog.cpp\
-	animal.cpp\
+	Animal.cpp\
 	WrongAnimal.cpp\
 	WrongCat.cpp\
 	Brain.cpp

@@ -1,6 +1,6 @@
 #ifndef BRAIN_HPP
 #define BRAIN_HPP
-#include "animal.hpp"
+#include "Animal.hpp"
 
 class Brain 
 {
@@ -9,7 +9,6 @@ class Brain
         Brain();
         Brain(const Brain &copy);
         Brain &operator=(const Brain &copy);
-        // void setBrain(std::string &ideas, int index);
         std::string getIdea(int index) const;
         void setIdea(int index, const std::string& idea);
         ~Brain();

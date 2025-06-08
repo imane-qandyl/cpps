@@ -1,38 +1,25 @@
-#include "animal.hpp"
+#include "Animal.hpp"
 #include "Dog.hpp"
 #include "Cat.hpp"
 
 int main()
 {
-    const Animal* a1 = new Dog();
-    const Animal* a2 = new Cat();
+    std::cout << "\n----MAIN 1----\n" << std::endl;
+	{
+		const Animal* animals[4];
+	
+		// Assign half cats and half dogs to the animal pointer array of size 4.
+		for (int i = 0; i < 2; i++) {
+			animals[i] = new Cat();
+		}
+		for (int i = 2; i < 4; i++) {
+			animals[i] = new Dog();
+		}
 
-    delete a1;
-    delete a2;
-
-    std::cout << "\n--- Deep Copy Test ---" << std::endl;
-
-    std::cout << "\n---Dog ---" << std::endl;
-    Dog original;
-    original.getBrain()->setIdea(0, "Chase the Dog");
-
-    Dog copy = original; // Deep copy
-    copy.getBrain()->setIdea(0, "Eat the bone");
-
-    std::cout << "Original Dog idea: " << original.getBrain()->getIdea(0) << std::endl;
-    std::cout << "Copied Dog idea: " << copy.getBrain()->getIdea(0) << std::endl;
-    std::cout << "Dog end" << std::endl;
-
-    std::cout << "\n---Cat ---" << std::endl;
-    Cat original1;
-    original1.getBrain()->setIdea(0, "Chase the cat");
-
-    Cat copy1 = original1; // Deep copy
-    copy1.getBrain()->setIdea(0, "Eat the bone");
-
-    std::cout << "Original Cat idea: " << original1.getBrain()->getIdea(0) << std::endl;
-    std::cout << "Copied Cat idea: " << copy1.getBrain()->getIdea(0) << std::endl;
-    std::cout << "Cat end" << std::endl;
-
-    return 0;
+		std::cout << "\n\n";
+		// Free the dynamically allocated memory for members of the animals array.
+		for (int i = 0; i < 4; i++) {
+			delete (animals[i]);
+		}
+	}
 }
