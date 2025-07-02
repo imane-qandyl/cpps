@@ -13,6 +13,8 @@ class Bureaucrat {
         int grade;
         Bureaucrat();
     public:
+        class GradeTooHighException;
+		class GradeTooLowException;
         Bureaucrat(const std::string &name, int grade);
         ~Bureaucrat();
         Bureaucrat(const Bureaucrat &other);
@@ -32,6 +34,7 @@ class Bureaucrat {
         public:
             virtual const char* what() const throw();
         };
+        void Bureaucrat::executeForm(const AForm& form) const ;
 };             
 std::ostream&		operator<<(std::ostream& o, const Bureaucrat& object);
 

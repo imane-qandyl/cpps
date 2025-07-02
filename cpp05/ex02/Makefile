@@ -5,7 +5,10 @@ NAME	= Form
 
 SRCS =	main.cpp					\
 		Bureaucrat.cpp				\
-		Form.cpp					
+		AForm.cpp					\
+		PresidentialPardonForm.cpp	\
+		RobotomyRequestForm.cpp		\
+		ShrubberyCreationForm.cpp
 
 OBJS = $(SRCS:.cpp=.o)
 
