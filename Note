@@ -1,0 +1,5 @@
+when something unexpected occurs, you "throw away" the issue by sending an error message.
+
+So, in simple terms, if you try to divide by zero (which is not allowed in math), 
+the code throws an exception with the error message. 
+The catch block then catches this exception and displays the error message.
