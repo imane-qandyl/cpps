@@ -13,10 +13,10 @@ AForm::~AForm() {
     std::cout << "AForm destructor called\n" << std::endl;
 }
 
-AForm::AForm(const AForm &other)
-    : name(other.name), isSigned(other.isSigned), gradeToSign(other.gradeToSign), gradeToExecute(other.gradeToExecute) {
+AForm::AForm(const AForm &copy)
+    : name(copy.name), isSigned(copy.isSigned), gradeToSign(copy.gradeToSign), gradeToExecute(copy.gradeToExecute) {
     std::cout << "AForm copy constructor called\n" << std::endl;
-    *this = other;
+    *this = copy;
 }
 AForm &AForm::operator=(const AForm &other) {
     if (this != &other) {

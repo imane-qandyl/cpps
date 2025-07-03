@@ -1,7 +1,7 @@
-CXX = c++
+CXX = C:/msys64/ucrt64/bin/c++.exe #mingw32-make
 CXXFLAGS = -Wall -Wextra -Werror -std=c++98
 
-NAME	= Form
+NAME	= AForm
 
 SRCS =	main.cpp					\
 		Bureaucrat.cpp				\

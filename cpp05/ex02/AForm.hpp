@@ -16,7 +16,7 @@ class AForm {
     public:
     AForm(const std::string &name, int gradeToSign, int gradeToExecute);
     ~AForm();
-    AForm(const AForm &other);
+    AForm(const AForm &copy);
     AForm &operator=(const AForm &other);
     std::string const& getName() const;
     bool getIsSigned() const;
