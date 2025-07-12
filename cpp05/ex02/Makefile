@@ -1,4 +1,4 @@
-CXX = C:/msys64/ucrt64/bin/c++.exe #mingw32-make
+CXX = c++ 
 CXXFLAGS = -Wall -Wextra -Werror -std=c++98
 
 NAME	= AForm

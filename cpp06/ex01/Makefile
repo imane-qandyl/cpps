@@ -16,10 +16,8 @@ all: $(NAME)
 
 clean:
 	@rm -rf $(OBJ)
-	@echo "Cleaned all 'o' files successfully"
 
 fclean: clean
 	@rm -rf $(NAME)
-	@echo "Cleaned Program name successfully"
 
 re: fclean all
