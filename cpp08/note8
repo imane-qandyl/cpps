@@ -1,0 +1,35 @@
+This module focuses on how to work with containers, 
+template programming, iterators, and algorithms in C++—essentially 
+teaching you to use the Standard Template Library (STL) 
+
+
+
+A container: is a class that stores multiple elements.
+
+A templated container: uses templates to handle any data type, making it generic and reusable
+
+An iterator: is like a pointer used to move through a container's elements.
+
+
+
+Examples in STL:
+
+std::vector<T>
+
+std::list<T>
+
+std::deque<T>
+
+std::map<Key, Value>
+
+STL provides ready-to-use algorithms to manipulate containers using iterators:
+
+std::find()
+
+std::sort()
+
+std::count()
+
+begin()
+
+std::copy()

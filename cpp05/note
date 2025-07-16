@@ -1,0 +1,30 @@
+ C++ Module 05, the main focus is on inheritance, polymorphism, 
+ and understanding how to structure classes using virtual functions.
+
+i build a system like:
+
+Bureaucrat class with a grade.
+
+Form class that needs signing by a bureaucrat of a certain grade.
+
+If the grade is too low → throw an exception.
+
+
+Inheritance :
+ Allows one class (the child or derived class) to inherit attributes and methods from another((the parent or base class)).
+
+
+Polymorphism
+Enables using base class pointers or references to call derived class methods.
+Animal* a = new Cat();
+a->speak();  // Meow (not Animal speaks)
+
+Virtual Functions:
+
+When you use inheritance, sometimes you want the derived class to have its own version of a method.
+You declare the method as virtual in the base class so that C++ knows to use the derived version when appropriate.
+
+
+pure virtual function:
+
+is a function declared in the base class that must be implemented in derived classes

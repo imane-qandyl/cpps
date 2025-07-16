@@ -1,0 +1,13 @@
+the main topic is Templates. This module focuses 
+on writing generic and reusable code, so your classes
+and functions can work with any type, not just one specific type like int or string.
+
+
+
+Templates: allow writing one function that works with any data type.
+
+Concept	Why?
+
+Function Templates:	One function, all types (swap, min, max)
+
+Class Templates:	One class, all types (like a Box or a simple Array class)
