@@ -1,7 +1,7 @@
 NAME = Whatever
 
 SRC = main.cpp\
-		easyfind.hpp
+		easyfind.cpp
 
 OBJ = $(SRC:.cpp=.o)
 

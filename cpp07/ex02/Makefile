@@ -1,6 +1,6 @@
-NAME = Whatever
+NAME = Array
 
-SRC = main.cpp
+SRC = main.cpp\
 
 OBJ = $(SRC:.cpp=.o)
 
