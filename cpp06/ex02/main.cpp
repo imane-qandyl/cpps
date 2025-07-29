@@ -5,6 +5,7 @@
 
 int main() {
     Base* hello = generate(); // Generate a random Base-derived object
+
     identify(hello);          // Identify the type using a pointer
     identify(*hello);         // Identify the type using a reference
 
