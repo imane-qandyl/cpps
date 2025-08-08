@@ -1,4 +1,4 @@
-NAME = Whatever
+NAME = span
 
 SRC = main.cpp\
 		easyfind.cpp
