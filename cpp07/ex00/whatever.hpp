@@ -6,7 +6,7 @@
 /*   By: imqandyl <imqandyl@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/12 20:01:14 by imqandyl          #+#    #+#             */
-/*   Updated: 2025/07/12 20:01:15 by imqandyl         ###   ########.fr       */
+/*   Updated: 2025/08/26 22:54:37 by imqandyl         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ T min(T a, T b) {
 }  
 
 template <typename T>
-void swap(T& a, T& b) {
+void swap(T a, T b) {
     T temp = a;
     a = b;
     b = temp;

@@ -1,5 +1,5 @@
 #include <iostream>
-#include <Array.hpp>
+#include "Array.hpp"
 
 #define MAX_VAL 750
 int main(int, char**)
@@ -18,7 +18,21 @@ int main(int, char**)
         Array<int> tmp = numbers;
         Array<int> test(tmp);
     }
+    // MY OWN SCOPE (new new gg)
+    // {
+    //     Array<int> copy;
+    //     copy = numbers;
+    //     copy = numbers;
 
+    //     for (size_t i = 0; i < copy.size(); i++)
+    //     {
+    //         if (copy[i] != numbers[i])
+    //         {
+    //             std::cerr << "Error: copy does not match original!" << std::endl;
+    //             return 1;
+    //         }
+    //     }
+    // }
     for (int i = 0; i < MAX_VAL; i++)
     {
         if (mirror[i] != numbers[i])
