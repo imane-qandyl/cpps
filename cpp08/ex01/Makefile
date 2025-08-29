@@ -1,7 +1,7 @@
 NAME = span
 
 SRC = main.cpp\
-		easyfind.cpp
+		Span.cpp
 
 OBJ = $(SRC:.cpp=.o)
 

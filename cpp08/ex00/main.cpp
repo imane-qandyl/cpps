@@ -2,11 +2,20 @@
 
 int main() {
     try {
-        std::vector<int> vec = {10, 20, 30, 40};
+        std::vector<int> vec;
+        vec.push_back(10);
+        vec.push_back(20);
+        vec.push_back(30);
+        vec.push_back(40);
         std::vector<int>::const_iterator it = easyfind(vec, 30);
         std::cout << "Found in vector: " << *it << std::endl;
 
-        std::list<int> lst = {1, 2, 3, 4, 5};
+        std::list<int> lst;
+        lst.push_back(2);
+        lst.push_back(1);
+        lst.push_back(3);
+        lst.push_back(4);
+        lst.push_back(5);
         std::list<int>::const_iterator it2 = easyfind(lst, 4);
         std::cout << "Found in list: " << *it2 << std::endl;
 

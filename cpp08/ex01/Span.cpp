@@ -1,20 +1,26 @@
 #include "Span.hpp"
+
 Span::Span(unsigned int N) : _maxSize(N) {}
-Span::Span(const Span &copy) : max(0) {
-    this->max = copy.max;
+
+Span::Span(const Span &copy) : _maxSize(0) {
+    this->_maxSize = copy._maxSize;
     std::cout << "Copy Span Constructor Called" << std::endl;
 }
 
 Span &Span::operator=(const Span &copy)
 {
-    this->max = copy.max;
-    std::cout << "Copy Assignment Span Constructor Called" << std::endl;
+    if(this != &copy)
+    {    
+        this->_maxSize = copy._maxSize;
+        std::cout << "Copy Assignment Span Constructor Called" << std::endl;
+    }
     return (*this);
 }
 
 Span::~Span() {
     std::cout << "Span Destructor Called" << std::endl;
 }
+
 void Span::addNumber(int number) {
     if (_numbers.size() >= _maxSize)
         throw std::overflow_error("Cannot add more numbers: Span is full.");
@@ -41,8 +47,8 @@ int Span::longestSpan() {
     if (_numbers.size() < 2)
         throw std::logic_error("Not enough numbers to find a span.");
 
-    int minVal = *std::min_element(_numbers.begin(), _numbers.end());
-    int maxVal = *std::max_element(_numbers.begin(), _numbers.end());
+    int minVal = *(std::min_element(_numbers.begin(), _numbers.end()));
+    int maxVal = *(std::max_element(_numbers.begin(), _numbers.end()));
 
     return maxVal - minVal;
 }
