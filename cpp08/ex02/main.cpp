@@ -35,17 +35,44 @@ int main()
         // {
         //     std::cout << *ite << std::endl;
         // }
-        std::cout << "=============================" << std::endl;
+        std::cout << "============================" << std::endl;
         while (it != ite)
         {
             std::cout << *it << std::endl;
             ++it;
         }
-        std::cout << "=============================" << std::endl;
 
-        MutantStack<int> mstack2(mstack);
-        std::cout << "The top element of the copied stack is: " << *(mstack2.begin()) << std::endl;
-        std::cout << "The top element of the copied stack is: " << *(mstack2.end()) << std::endl;
+        std::stack<int> s(mstack);
+    }
+
+    std::cout << "=============== for list ===============" << std::endl;
+    {
+        std::list<int> mlist;
+        mlist.push_back(5);
+        mlist.push_back(17);
+    
+        std::cout << "The top element is: " << mlist.back() << std::endl;
+
+        mlist.pop_back();
+
+        std::cout << "The current size is: " << mlist.size() << std::endl;
+
+        mlist.push_back(3);
+        mlist.push_back(5);
+        mlist.push_back(737);
+
+        mlist.push_back(0);
+        std::list<int>::iterator it = mlist.begin();
+        std::list<int>::iterator ite = mlist.end();
+        ++it;
+        --it;
+        while (it != ite)
+        {
+            std::cout << *it << std::endl;
+            ++it;
+        }
+
+        std::list<int> s(mlist);
     }
 
     std::cout << "=============== for const ===============" << std::endl;

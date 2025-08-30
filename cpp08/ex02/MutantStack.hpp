@@ -28,7 +28,7 @@ class MutantStack : public std::stack<T, Container>
             return *this;
         }
         ~MutantStack(){
-                std::cout << "Deconstructor being called here " << std::endl;
+                std::cout << "Destructor being called here " << std::endl;
         }
 
         typedef typename Container::iterator iterator;
@@ -47,7 +47,5 @@ class MutantStack : public std::stack<T, Container>
 		const_reverse_iterator		rbegin() const {return this->c.rbegin();};
 		const_reverse_iterator		rend() const {return this->c.rend();};
 };
-
-
 
 //gets access to that protected member c.
