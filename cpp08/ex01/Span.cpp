@@ -52,3 +52,17 @@ int Span::longestSpan() {
 
     return maxVal - minVal;
 }
+
+void	Span::fill(std::vector<int>::iterator start, std::vector<int>::iterator end)
+{
+	for (std::vector<int>::iterator iter = start; iter != end; iter++) {
+		try
+		{
+			this->addNumber(*iter);
+		}
+		catch (std::exception& e)
+		{
+			std::cerr << "Error: " << e.what() << std::endl;
+		}
+	}
+}
