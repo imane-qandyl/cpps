@@ -11,6 +11,9 @@ CPPFLAGS = -std=c++98 -Wall -Wextra -Werror
 $(NAME): $(OBJ)
 	@ $(CPP) $(CPPFLAGS) $(OBJ) -o $(NAME)
 
+%.o: %.cpp
+	$(CPP) $(CFLAGS) -c $< -o $@
+
 all: $(NAME)
 
 clean:
