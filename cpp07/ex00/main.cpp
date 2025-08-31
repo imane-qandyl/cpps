@@ -6,7 +6,7 @@
 /*   By: imqandyl <imqandyl@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/12 20:01:10 by imqandyl          #+#    #+#             */
-/*   Updated: 2025/08/26 22:57:31 by imqandyl         ###   ########.fr       */
+/*   Updated: 2025/08/31 18:24:07 by imqandyl         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,7 @@ int main( void ) {
 
     And obj1(42), obj2(84);
     swap(obj1, obj2);
-    // std::cout << "obj1 = " << obj1.getValue()  << std::endl;
+    std::cout << "obj1 = " << obj1.getValue()  << std::endl;
 
     return 0;
 }
