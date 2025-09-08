@@ -55,7 +55,7 @@ std::vector<int> PmergeMe::fordJohnsonSortVector(std::vector<int> vector)
             pairs.push_back(std::make_pair(vector[i], vector[i + 1]));
     }
 
-    // Handle odd element
+    // Handle odd element (remaining )
     if (i < vector.size())
     {
         hasOdd = true;
@@ -156,4 +156,84 @@ std::deque<int> PmergeMe::fordJohnsonSortDeque(std::deque<int> deque)
     }
 
     return result;
+}
+
+bool PmergeMe::isValidPositiveInteger(const std::string &str)
+{
+    if (str.empty())
+        return false;
+    
+    for (size_t i = 0; i < str.length(); ++i)
+    {
+        if (!std::isdigit(str[i]))
+            return false;
+    }
+    
+    // Convert and check if it's positive
+    std::istringstream iss(str);
+    int num;
+    iss >> num;
+    return num > 0;
+}
+
+void PmergeMe::printContainer(const std::vector<int> &container, const std::string &label)
+{
+    std::cout << label;
+    for (size_t i = 0; i < container.size(); ++i)
+    {
+        std::cout << container[i];
+        if (i < container.size() - 1)
+            std::cout << " ";
+    }
+    std::cout << std::endl;
+}
+
+void PmergeMe::processSequence(int argc, char **argv)
+{
+    std::vector<int> numbers;
+    
+    // Parse and validate arguments
+    for (int i = 1; i < argc; ++i)
+    {
+        std::string arg(argv[i]);
+        if (!isValidPositiveInteger(arg))
+        {
+            throw std::invalid_argument("Invalid argument: " + arg);
+        }
+        
+        std::istringstream iss(arg);
+        int num;
+        iss >> num;
+        numbers.push_back(num);
+    }
+    
+    if (numbers.empty())
+        throw std::invalid_argument("No valid numbers provided");
+    
+    // Display original sequence
+    printContainer(numbers, "Before: ");
+    
+    // Sort with vector and measure time
+    clock_t start = clock();
+    std::vector<int> sortedVector = this->fordJohnsonSortVector(numbers);
+    clock_t end = clock();
+    double vectorTime = static_cast<double>(end - start) / CLOCKS_PER_SEC * 1000000;
+    
+    // Sort with deque and measure time
+    std::deque<int> dequeNumbers(numbers.begin(), numbers.end());
+    start = clock();
+    std::deque<int> sortedDeque = this->fordJohnsonSortDeque(dequeNumbers);
+    end = clock();
+    double dequeTime = static_cast<double>(end - start) / CLOCKS_PER_SEC * 1000000;
+    
+    // Display sorted sequence
+    std::vector<int> resultVector(sortedVector.begin(), sortedVector.end());
+    printContainer(resultVector, "After:  ");
+    
+    // Display timing information
+    std::cout << std::fixed << std::setprecision(2);
+    std::cout << "Time to process a range of " << numbers.size() 
+              << " elements with std::vector : " << vectorTime << " us" << std::endl;
+    std::cout << "Time to process a range of " << numbers.size() 
+              << " elements with std::deque  : " << dequeTime << " us" << std::endl;
 }

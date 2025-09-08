@@ -40,7 +40,7 @@ bool BitcoinExchange::isValidValue(std::string &str, double &value) const {
     value = std::strtod(str.c_str(), &end);
     if (*end != '\0')
         return false;
-    if (value < 0 || value > INT_MAX)
+    if (value < 0)
         throw std::runtime_error("Error: not a positive number.");
     if (value > 1000)
         throw std::runtime_error("Error: too large a number.");
@@ -77,7 +77,7 @@ void BitcoinExchange::processInput(const std::string &filename) const {
         throw std::runtime_error("Error: could not open file.");
 
     std::string line;
-
+    std::getline(file, line);
     while (std::getline(file, line)) {
         if (line.empty())
             continue;
